@@ -2,3 +2,5 @@ spring:
   application:
     name: transcoder-service
     version: 1.0.0
+  profiles:
+    active: dev

@@ -1,0 +1,30 @@
+# dev configurations
+server:
+  port: 8081
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/transcoder
+      host: localhost
+      port: 27017
+      database: transcoder
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+
+logging:
+  level:
+    web: info
+    sql: info
+    root: info
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} | %-5level | %logger{1.} | %msg%n"
+
+debug: false
