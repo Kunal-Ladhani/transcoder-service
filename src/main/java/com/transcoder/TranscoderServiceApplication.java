@@ -17,7 +17,6 @@ public class TranscoderServiceApplication {
         SpringApplication app = new SpringApplication(TranscoderServiceApplication.class);
         app.setDefaultProperties(Collections.singletonMap("spring.profiles.default", "dev"));
         Environment env = app.run(args).getEnvironment();
-
         log.info("""
                         \n
                         Access URLs:

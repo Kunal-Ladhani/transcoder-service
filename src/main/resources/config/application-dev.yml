@@ -7,17 +7,20 @@ spring:
     activate:
       on-profile: dev
 
+  application:
+    name: transcoder-service
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+
   data:
     mongodb:
       uri: mongodb://localhost:27017/transcoder
       host: localhost
       port: 27017
       database: transcoder
-
-  servlet:
-    multipart:
-      enabled: true
-      max-file-size: 10MB
 
 logging:
   level:
